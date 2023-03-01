@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bb07956-cc30-4602-9dae-5841990c3e27" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeurogineQ1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/neurogine/Neurogine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Neurogine_Technical_Assessment_Questionnaire.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NeurogineQ1/com/neurogine/Neurogine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NeurogineQ1/com/neurogine/Neurogine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/neurogine/Neurogine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/neurogine/Neurogine.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +50,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1677654634313</updated>
-      <workItem from="1677654637160" duration="452000" />
+      <workItem from="1677654637160" duration="2949000" />
     </task>
     <servers />
   </component>
@@ -72,5 +70,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/neurogine/Neurogine.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
