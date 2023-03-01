@@ -59,7 +59,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>kasuwarbello</finalName>
+		<finalName>neurogine</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

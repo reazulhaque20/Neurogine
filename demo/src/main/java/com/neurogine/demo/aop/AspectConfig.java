@@ -13,25 +13,23 @@ import org.springframework.web.server.ResponseStatusException;
 
 import com.neurogine.demo.exphandler.TaskException;
 
-
-
 @Aspect
 @Configuration
 public class AspectConfig {
 
 	private Logger log = LoggerFactory.getLogger(AspectConfig.class);
 	
-	@Before(value = "execution(* com.example.neurogine.*.*(..))")
+	@Before(value = "execution(* com.neurogine.demo.*.*(..))")
 	public void logStatementBefore(JoinPoint joinPoint) {
 		log.info("Executing {}",joinPoint);
 	}
 	
-	@After(value = "execution(* com.example.neurogine.*.*(..))")
+	@After(value = "execution(* com.neurogine.demo.*.*(..))")
 	public void logStatementAfter(JoinPoint joinPoint) {
-		log.info("Complete exceution of {}",joinPoint);
+		log.info("Complete execution of {}",joinPoint);
 	}
 	
-	@Around(value = "execution(* com.thecodereveal.app.services.*.*(..))")
+	@Around(value = "execution(* com.neurogine.demo.service.*.*(..))")
 	public Object taskHandler(ProceedingJoinPoint joinPoint) throws Throwable {
 		
 		try {
@@ -45,14 +43,14 @@ public class AspectConfig {
 		}
 	}
 	
-	@Around(value = "execution(* com.example.neurogine.*.*(..))")
+	@Around(value = "execution(* com.neurogine.demo.*.*(..))")
 	public Object timeTracker(ProceedingJoinPoint joinPoint) throws Throwable {
 		
-		long stratTime=System.currentTimeMillis();
+		long startTime=System.currentTimeMillis();
 		
 		try {
 			Object obj = joinPoint.proceed();
-			long timeTaken=System.currentTimeMillis()-stratTime;
+			long timeTaken=System.currentTimeMillis()-startTime;
 			log.info("Time taken by {} is {}",joinPoint,timeTaken);
 			return obj;
 		}
