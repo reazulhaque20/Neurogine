@@ -1,4 +1,4 @@
-package com.neurogine.test;
+package com.neurogine.demo;
 
 @Service
 public class MerchantService {

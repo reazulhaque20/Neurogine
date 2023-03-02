@@ -1,7 +1,11 @@
 package com.neurogine.demo.exphandler;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import org.springframework.http.HttpStatus;
 
+@Data
+@AllArgsConstructor
 public class TaskException extends RuntimeException {
 
 	private String message;
@@ -13,35 +17,4 @@ public class TaskException extends RuntimeException {
 		this.message = message;
 	}
 
-
-	public TaskException(String message, HttpStatus httpStatus) {
-		super();
-		this.message = message;
-		this.httpStatus = httpStatus;
-	}
-
-
-	public String getMessage() {
-		return message;
-	}
-
-
-	public void setMessage(String message) {
-		this.message = message;
-	}
-
-
-	public HttpStatus getHttpStatus() {
-		return httpStatus;
-	}
-
-
-	public void setHttpStatus(HttpStatus httpStatus) {
-		this.httpStatus = httpStatus;
-	}
-	
-	
-	
-	
-	
 }
