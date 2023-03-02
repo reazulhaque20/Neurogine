@@ -1,15 +1,11 @@
-package com.neurogine.demo;
+package com.neurogine.demo.service;
 
-@Service
-public class MerchantService {
+import com.neurogine.demo.model.Merchant;
 
-    public Merchant createMerchant(String name, String merchantId) {
-        // Implementation logic
-    }
-
-    public void deleteMerchant(String merchantId) {
-        // Implementation logic
-    }
+public interface MerchantService {
+	
+	public Merchant createMerchant(String name, long merchantId);
+	
+	public void deleteMerchant(long merchantId);
 
 }
-

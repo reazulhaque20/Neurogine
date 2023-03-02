@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bb07956-cc30-4602-9dae-5841990c3e27" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NeurogineQ1/com/neurogine/Neurogine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NeurogineQ1/com/neurogine/Neurogine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo/src/main/java/com/neurogine/demo/aop/AspectConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/src/main/java/com/neurogine/demo/aop/AspectConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo/src/main/java/com/neurogine/demo/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/src/main/java/com/neurogine/demo/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo/src/main/java/com/neurogine/demo/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/src/main/java/com/neurogine/demo/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo/src/main/java/com/neurogine/demo/service/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/src/main/java/com/neurogine/demo/service/ProductServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="3bb07956-cc30-4602-9dae-5841990c3e27" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
