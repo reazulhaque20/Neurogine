@@ -6,7 +6,6 @@ import java.util.Optional;
 import com.neurogine.demo.exphandler.TaskException;
 import com.neurogine.demo.model.Product;
 import com.neurogine.demo.repository.ProductRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -22,26 +21,30 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public void updateProduct(Product product) {
-		Product proOptional = productRepository.findById(product.getId()).get();
-		proOptional.setDescription(product.getDescription());
-		proOptional.setProductName(product.getProductName());
-		proOptional.setPrice(product.getPrice());
-		productRepository.save(proOptional);
-		
+	public Product updateProduct(Long id, Product product) {
+		Optional<Product> pOptional = productRepository.findById(id);
+		Product newProduct = new Product();
+		if (pOptional.isPresent()) {
+			newProduct = pOptional.get();
+			newProduct.setDescription(product.getDescription());
+			newProduct.setProductName(product.getProductName());
+			newProduct.setPrice(product.getPrice());
+			return productRepository.saveAndFlush(newProduct);
+		}
+
+		return null;
 	}
 
 	@Override
 	public Product addProduct(Product product) {
-		productRepository.save(product);
+		return productRepository.saveAndFlush(product);
 
-        return product;
     }
 
 	@Override
 	public void deleteProduct(long id) {
 		Optional<Product> proOptional = productRepository.findById(id);
-		productRepository.delete(proOptional.get());
+		proOptional.ifPresent(product -> productRepository.delete(product));
 		
 	}
 
@@ -51,7 +54,7 @@ public class ProductServiceImpl implements ProductService {
 		if(!productOptional.isPresent()){
 			throw new TaskException("Product Not Found With ID: " + id, HttpStatus.NOT_FOUND);
 		}
-		return productRepository.findById(id).get();
+		return productOptional.get();
 	}
 
 }

@@ -30,31 +30,27 @@ public class ProductController {
 	@Autowired
 	private ProductService productService;
 
-	@GetMapping
+	@GetMapping("/getAllProducts")
 	public List<Product> getAllProducts() {
 		return productService.findAll();
 	}
 
-	@GetMapping("/{id}")
+	@GetMapping("/getProductById/{id}")
 	public Product getProductById(@PathVariable Long id) {
 		return productService.findById(id);
 	}
 
-	@PostMapping
+	@PostMapping("/saveProduct")
 	public Product saveProduct(@Valid @RequestBody Product product) {
 		return productService.addProduct(product);
 	}
 
-	@PutMapping("/{id}")
+	@PutMapping("/updateProduct/{id}")
 	public Product updateProduct(@PathVariable Long id, @Valid @RequestBody Product product) {
-		Product existingProduct = productService.findById(id);
-		existingProduct.setProductName(product.getProductName());
-		existingProduct.setDescription(product.getDescription());
-		existingProduct.setPrice(product.getPrice());
-		return productService.addProduct(existingProduct);
+		return productService.updateProduct(id ,product);
 	}
 
-	@DeleteMapping("/{id}")
+	@DeleteMapping("/deleteProduct/{id}")
 	public void deleteProduct(@PathVariable Long id) {
 		productService.deleteProduct(id);
 	}

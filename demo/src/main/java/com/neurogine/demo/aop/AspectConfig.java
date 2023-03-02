@@ -17,7 +17,7 @@ import com.neurogine.demo.exphandler.TaskException;
 @Configuration
 public class AspectConfig {
 
-	private Logger log = LoggerFactory.getLogger(AspectConfig.class);
+	private final Logger log = LoggerFactory.getLogger(AspectConfig.class);
 	
 	@Before(value = "execution(* com.neurogine.demo.*.*(..))")
 	public void logStatementBefore(JoinPoint joinPoint) {
@@ -33,8 +33,7 @@ public class AspectConfig {
 	public Object taskHandler(ProceedingJoinPoint joinPoint) throws Throwable {
 		
 		try {
-			Object obj = joinPoint.proceed();
-			return obj;
+			return joinPoint.proceed();
 		}
 		catch(TaskException e) {
 			log.info(" TaskException StatusCode {}",e.getHttpStatus().value());
@@ -49,10 +48,9 @@ public class AspectConfig {
 		long startTime=System.currentTimeMillis();
 		
 		try {
-			Object obj = joinPoint.proceed();
 			long timeTaken=System.currentTimeMillis()-startTime;
 			log.info("Time taken by {} is {}",joinPoint,timeTaken);
-			return obj;
+			return joinPoint.proceed();
 		}
 		catch(TaskException e) {
 			log.info(" TaskException StatusCode {}",e.getHttpStatus().value());
